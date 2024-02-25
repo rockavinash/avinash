@@ -1,0 +1,111 @@
+<html>
+<body style="	
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+font-family: 'Jost', sans-serif;
+background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);">
+
+ <div class="main" style="width: 350px;
+        height: 500px;
+        background: #1dbab4;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 5px 20px 50px #000;">  
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["a"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  else if(document.forms["myForm"]["c"].value.length <6){
+	alert("Password too short!!");
+	return false;
+}
+ else if(document.forms["myForm"]["d"].value.length <10){
+	alert("valid phone number!!");
+	return false;
+}
+}
+</script>
+<div class="signup" style="position: relative;
+                width:100%;
+                height: 100%;">
+
+<form name="myForm" action="register.php" onsubmit="return validateForm()" method="POST">
+
+<label style="color: #fff;
+                        font-size: 2.3em;
+                        justify-content: center;
+                        display: flex;
+                        margin: 60px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: .5s ease-in-out;" for="chk" aria-hidden="true">Create new account</label>
+
+ <input style="width: 60%;
+                        height: 20px;
+                        background: #e0dede;
+                        justify-content: center;
+                        display: flex;
+                        margin: 20px auto;
+                        padding: 10px;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;"  type="text" name="a" placeholder="Enter Name" required="">
+<input style="width: 60%;
+                        height: 20px;
+                        background: #e0dede;
+                        justify-content: center;
+                        display: flex;
+                        margin: 20px auto;
+                        padding: 10px;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;"  type="email" name="b" placeholder="emter email">
+ <input style="width: 60%;
+                        height: 20px;
+                        background: #e0dede;
+                        justify-content: center;
+                        display: flex;
+                        margin: 20px auto;
+                        padding: 10px;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;"  type="password" name="c" placeholder ="enter password">
+<input style="width: 60%;
+                        height: 20px;
+                        background: #e0dede;
+                        justify-content: center;
+                        display: flex;
+                        margin: 20px auto;
+                        padding: 10px;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;"  type="number" name="d" placeholder ="enter phone number">
+<input style="width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;" type="submit" value="Submit"><br><br>
+
+</form>
+</div>
+</div>
+</body>
+</html>
